@@ -2,18 +2,18 @@
 
 <h1>Listing Pictures</h1>
 
-<nav class="flex-nav">
+<!-- <nav class="flex-nav"> -->
   <!--ul is the container/parent -->
-  <ul>
+  <!-- <ul> -->
     <!-- li are the children -->
-    <li><a href="/users">Account</a></li>
-    <li><a href="/pictures">Pictures</a></li>
+    <!-- <li><a href="/users">Account</a></li>
+    <li><a href="/pictures">Pictures</a></li> -->
     <!-- <li><a href="users/new">Sign Up</a></li> -->
     <!-- <li><a href="#">Child 04</a></li>
     <li><a href="#">Child 05</a></li>
     <li><a href="#">Child 06</a></li> -->
-  </ul>
-</nav>
+  <!-- </ul>
+</nav> -->
 
 
 
@@ -37,6 +37,9 @@
           <li class="picture-list">
             <h3><%= picture.title %></h3>
             <%= image_tag picture.url %>​
+            <% if picture.user_id %>
+              <%= picture.user_id %>
+            <% end %>
             <%= link_to 'Show', picture %>
             <%= link_to 'Edit', edit_picture_path(picture) %>
             <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %>

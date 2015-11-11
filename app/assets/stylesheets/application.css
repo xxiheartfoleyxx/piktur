@@ -30,8 +30,8 @@ body {
        display: inline-block;
        width: 100%;
        text-align: center;
-       color: $brown;
-       font-weight: 400;
+       /*color: $brown;*/
+       /*font-weight: 400;*/
        &:hover {
          color: teal;
        }
