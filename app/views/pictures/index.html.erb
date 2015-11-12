@@ -2,35 +2,52 @@
 
 <h1>Listing Pictures</h1>
 
-<table>
+<!-- <nav class="flex-nav"> -->
+  <!--ul is the container/parent -->
+  <!-- <ul> -->
+    <!-- li are the children -->
+    <!-- <li><a href="/users">Account</a></li>
+    <li><a href="/pictures">Pictures</a></li> -->
+    <!-- <li><a href="users/new">Sign Up</a></li> -->
+    <!-- <li><a href="#">Child 04</a></li>
+    <li><a href="#">Child 05</a></li>
+    <li><a href="#">Child 06</a></li> -->
+  <!-- </ul>
+</nav> -->
+
+
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Url</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
 <%= link_to 'New Picture', new_picture_path %>
 
 
-  <tbody>
+  <!-- <tbody> -->
     <div>
       <ul class="picture-container">
-    <% @pictures.each do |picture| %>
-    <li style="list-style-type:none" class="pictures">
-      <tr>
-        <td><%= picture.title %></td>
-        <td>​<%= image_tag picture.url %>​</td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </li>
-      </tr>
-    </ul>
-    <% end %>
-  </div>
-  </tbody>
-</table>
+        <% @pictures.each do |picture| %>
+          <li class="picture-list">
+            <h3><%= picture.title %></h3>
+            <%= image_tag picture.url %>​
+            <% if picture.user_id %>
+              <%= picture.user_id %>
+            <% end %>
+            <%= link_to 'Show', picture %>
+            <%= link_to 'Edit', edit_picture_path(picture) %>
+            <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <!-- </tbody> -->
+<!-- </table> -->
 
 <br>
