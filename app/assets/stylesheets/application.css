@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
  * {
    box-sizing: border-box;
    margin-bottom: 0;
@@ -80,4 +82,30 @@ li {
 .picture-container li:first-of-type a{
   text-align: center;
 
+}
+
+
+
+/* LOGIN */
+.login-flex {
+  /*background: grey;*/
+  display: flex;
+}
+
+.login {
+  width: 50%;
+  margin: 0 auto;
+  /*background: red;*/
+}
+
+.login h1 {
+  padding-bottom: 5%;
+}
+
+.email {
+  padding-bottom: 2%;
+}
+
+.remember {
+  padding-bottom: 2%;
 }
